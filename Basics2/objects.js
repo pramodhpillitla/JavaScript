@@ -55,6 +55,22 @@ const person2 = {
 console.log(person2.address.street); // Output: "123 Main St"
 console.log(person2["address"]["zip"]); // Output: "90001"  
 
+//object destructuring
+const { name, age, city } = person;
+console.log(name); // Output: "John"
+console.log(age); // Output: 30
+console.log(city); // Output: "New York"
+
+const { name: personName, age: personAge } = person;
+console.log(personName);
+console.log(personAge);
+
+//json stands for JavaScript Object Notation, and it is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. JSON is often used to transmit data between a server and a web application as an alternative to XML.
+
+const jsonString = '{"name": "Bob", "age": 40, "city": "Chicago"}';
+const jsonObject = JSON.parse(jsonString);
+console.log(jsonObject.name);
+
 
 //2. constructor function 
 function Person(name, age, city) {
